@@ -123,7 +123,8 @@ int main() // Função principal
 	printf("Escolha a opção desejada\n\n");  // O \n pula uma linha na tela
 	printf("\t1Registrar nomes\n");          // O \t da um espaçamento na tela
 	printf("\t2Consultar nomes\n");
-	printf("\t3Deletar nomes\n\n\n");
+	printf("\t3Deletar nomes\n");
+	printf("\t4Sair do sistema\n\n\n");
 	printf("Opção:");                          // Fim do menu
 	
 	scanf("%d", &opcao);  //O scanf armazena na variavel opcao, o %d indica que é um numero inteiro
@@ -143,6 +144,10 @@ int main() // Função principal
 		case 3:
 			deletar();
 		break;
+		
+		case 4:
+			printf("Obrigado por ultilizar o sistema!\n");
+			return 0;
 		
 		default:
 			printf("essa opção está indisponivel!\n");
