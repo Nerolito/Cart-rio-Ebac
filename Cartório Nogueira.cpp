@@ -109,53 +109,78 @@ int deletar()  //Função secundaria que é carregada somente quando é chamada pela
 int main() // Função principal
 {
 	
-	int opcao=0; // Definindo variáveis
-	int x=1;
-	
-	
-	for(x=1;x=1;)  //O "for" cria um loço de repetição
-  { 
-	system("cls");  // Comando para limpar a tela
-	
 	setlocale(LC_ALL, "portuguese"); // O setlocale define a linguagem 
 	
-	printf("####Cartório Nogueira####\n\n");   // Inicio do menu
-	printf("Escolha a opção desejada\n\n");  // O \n pula uma linha na tela
-	printf("\t1Registrar nomes\n");          // O \t da um espaçamento na tela
-	printf("\t2Consultar nomes\n");
-	printf("\t3Deletar nomes\n");
-	printf("\t4Sair do sistema\n\n\n");
-	printf("Opção:");                          // Fim do menu
+	int opcao=0; // Definindo variáveis
+	int x=1;
+	char senhadigitada[20]="a";
+	int comparacao;
 	
-	scanf("%d", &opcao);  //O scanf armazena na variavel opcao, o %d indica que é um numero inteiro
+    for(x=1;x=1;)
+    {
+    	 system ("cls");
+	     printf("####Cartório Nogueira####\n\n");
+	     printf("Digite a senha de adimin:");
+	    
+	 
+     	 scanf("%s",senhadigitada);
 	
-	system("cls");  // Comando para limpar a tela
+    	 comparacao=strcmp(senhadigitada,"adimin");
+    
+           if(comparacao==0)
+	       { 
+	             printf("Login efetuado com sucesso!\n");
+	             system("pause");
 	
-	switch(opcao)  // Inicio da seleção||Operação de decisão  // O switch indica uma escolha
-	{
-		case 1:  // O case inicia a operação
-			registrar();
-		break;  // O break finaliza a operação
-		
-		case 2:
-			consultar();
-		break;
-		
-		case 3:
-			deletar();
-		break;
-		
-		case 4:
-			printf("Obrigado por ultilizar o sistema!\n");
-			return 0;
-		
-		default:
-			printf("essa opção está indisponivel!\n");
-			system("pause");  // Comando para pausar a tela do programa
-		break;
-		          // Fim da seleção
-	}   
-  }
+	
+	
+          	    for(x=1;x=1;)  //O "for" cria um loço de repetição
+                { 
+        	          system("cls");  // Comando para limpar a tela
+	
+	
+        	          printf("####Cartório Nogueira####\n\n");   // Inicio do menu
+        	          printf("Escolha a opção desejada\n\n");  // O \n pula uma linha na tela
+        	          printf("\t1Registrar nomes\n");          // O \t da um espaçamento na tela
+        	          printf("\t2Consultar nomes\n");
+	                  printf("\t3Deletar nomes\n");
+          	          printf("\t4Sair do sistema\n\n\n");
+           	          printf("Opção:");                          // Fim do menu
+   	
+         	          scanf("%d", &opcao);  //O scanf armazena na variavel opcao, o %d indica que é um numero inteiro
+    
+         	          system("cls");  // Comando para limpar a tela
+
+       	                switch(opcao)  // Inicio da seleção||Operação de decisão  // O switch indica uma escolha
+       	                {
+		                   case 1:  // O case inicia a ope
+			                  registrar();
+		                   break;  // O break finaliza a operação
+		     
+		                   case 2:
+			                  consultar();
+		                   break;
+		     
+		                   case 3:
+			                  deletar();
+		                   break;
+		     
+		                   case 4:
+			                  printf("Obrigado por ultilizar o sistema!\n");
+			               return 0;
+		   
+	                       default:
+			                  printf("essa opção está indisponivel!\n");
+			                  system("pause");  // Comando para pausar a tela do programa
+		                   break;
+		                                                      // Fim da seleção
+	                    }   
+                }
+            }
+	        else
+             printf("senha incorreta!"); 
+             system("pause");
+    }
 }
 
 
