@@ -17,39 +17,55 @@ int registrar()  //Função secundaria que é carregada somente quando é chamada pe
     
 	FILE *file;  //O "FILE" é uma função pronta do programa e o file cria o programa
 	file=fopen(arquivo,"w");  // O fopen abre o "file" com o nome da variavel "arquivo" e o comando "w" escreve no "file"
+	fprintf(file,"CPF:");
+	fclose(file);
+	
+	file=fopen(arquivo,"a");
 	fprintf(file,cpf);  // O "fprintf" insere dados da variável "cpf" no arquivo "file"
 	fclose(file);  // O fclose fecha o arquivo "file"
 	
 	file=fopen(arquivo,"a");  // O fopen abre o "file" com o nome da variavel "arquivo" e o comando "a" atualiza/adiciona conteudo ao "file"
-	fprintf(file,",");  // O "fprintf" insere os dados que estam entre as "aspas" no arquivo "file"
+	fprintf(file,"\n");  // O "fprintf" insere os dados que estam entre as "aspas" no arquivo "file"
 	fclose(file);  // O fclose fecha o arquivo "file"
 	
 	printf("digite o nome a ser cadastrado:");
 	scanf("%s",nome);  // O scanf armazena na variável nome, o %s indica que é um numero uma string
 	
 	file=fopen(arquivo,"a");  // O fopen abre o "file" com o nome da variavel "arquivo" e o comando "a" atualiza/adiciona conteudo ao "file"
+	fprintf(file,"NOME:");
+	fclose(file);
+	
+	file=fopen(arquivo,"a");
 	fprintf(file,nome);  // O "fprintf" insere dados da variável "nome" no arquivo "file"
 	fclose(file);  // O fclose fecha o arquivo "file"
 	
 	file=fopen(arquivo,"a");  // O fopen abre o "file" com o nome da variavel "arquivo" e o comando "a" atualiza/adiciona conteudo ao "file"
-	fprintf(file,",");  // O "fprintf" insere os dados que estam entre as "aspas" no arquivo "file"
+	fprintf(file,"\n");  // O "fprintf" insere os dados que estam entre as "aspas" no arquivo "file"
 	fclose(file);  // O fclose fecha o arquivo "file"
 	
 	printf("Digite o sobrenome a ser cadastrado:");
 	scanf("%s",sobrenome);  // O scanf armazena na variável sobrenome, o %s indica que é um numero uma string
 	
-	  file=fopen(arquivo,"a");  // O fopen abre o "file" com o nome da variavel "arquivo" e o comando "a" atualiza/adiciona conteudo ao "file"
+    file=fopen(arquivo,"a");  // O fopen abre o "file" com o nome da variavel "arquivo" e o comando "a" atualiza/adiciona conteudo ao "file"
+	fprintf(file,"SOBRENOME:");
+	fclose(file);
+	
+	file=fopen(arquivo,"a");
 	fprintf(file,sobrenome);  // O "fprintf" insere dados da variável "sobrenome" no arquivo "file"
 	fclose(file);  // O fclose fecha o arquivo "file"
 	
 	file=fopen(arquivo,"a");  // O fopen abre o "file" com o nome da variavel "arquivo" e o comando "a" atualiza/adiciona conteudo ao "file"
-	fprintf(file,",");  // O "fprintf" insere os dados que estam entre as "aspas" no arquivo "file"
+	fprintf(file,"\n");  // O "fprintf" insere os dados que estam entre as "aspas" no arquivo "file"
 	fclose(file);  // O fclose fecha o arquivo "file"
 	
 	printf("Digite o cargo a ser cadastrado:");
 	scanf("%s",cargo);  // O scanf armazena na variável cargo, o %s indica que é um numero uma string
 	
 	file=fopen(arquivo,"a");  // O fopen abre o "file" com o nome da variavel "arquivo" e o comando "a" atualiza/adiciona conteudo ao "file"
+	fprintf(file,"CARGO:");
+    fclose(file);
+	
+    file=fopen(arquivo,"a");
 	fprintf(file,cargo);  // O "fprintf" insere dados da variável "cargo" no arquivo "file"
 	fclose(file);  // O fclose fecha o arquivo "file"
 	
@@ -130,12 +146,10 @@ int main() // Função principal
            if(comparacao==0)
 	       { 
 	             printf("Login efetuado com sucesso!\n");
-	             system("pause");
 	
-	
-	
-          	    for(x=1;x=1;)  //O "for" cria um loço de repetição
-                { 
+	            for(x=1;x=1;) //O "for" cria um loço de repetição
+                {
+				  
         	          system("cls");  // Comando para limpar a tela
 	
 	
@@ -176,12 +190,13 @@ int main() // Função principal
 		                                                      // Fim da seleção
 	                    }   
                 }
-            }
-	        else
+			}
+			 else
              printf("senha incorreta!"); 
              system("pause");
     }
 }
+
 
 
 
